@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterbelajar/sized_expanded_stack/LayoutDua.dart';
+import 'package:flutterbelajar/sized_expanded_stack/LatihanTiga.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.amber,
           centerTitle: true,
         ),
-        body: LayoutDua(),
+        body: LatihanTiga(),
       ),
     );
   }
