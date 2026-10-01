@@ -14,13 +14,15 @@ class LatihanSatu extends StatelessWidget {
             Container(
               width: 100,
               height: 100,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(
-                    "https://fahmiad.com/wp-content/uploads/2022/01/foto-profil-wa-sad-boy4.jpg",
-                  ),
-                  fit: BoxFit.cover,
-                ),
+              child: Image.network(
+                "https://www.shutterstock.com/editorial/image-editorial/NdTdg54eM6TdgcwbNTAyMg==/avenged-sevenfold---m-shadows-matthew-sanders-440nw-5841906h.jpg",
+                fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) {
+                  return Text(
+                    "Gambar gagal dimuat",
+                    textAlign: TextAlign.center,
+                  );
+                },
               ),
             ),
             Column(
