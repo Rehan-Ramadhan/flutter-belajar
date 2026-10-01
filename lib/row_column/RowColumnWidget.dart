@@ -15,10 +15,18 @@ class RowColumnWidget extends StatelessWidget {
               children: [Icon(Icons.call), SizedBox(height: 10), Text("Call")],
             ),
             Column(
-              children: [Icon(Icons.route), SizedBox(height: 10), Text("Route")],
+              children: [
+                Icon(Icons.route),
+                SizedBox(height: 10),
+                Text("Route"),
+              ],
             ),
             Column(
-              children: [Icon(Icons.share), SizedBox(height: 10), Text("Share")],
+              children: [
+                Icon(Icons.share),
+                SizedBox(height: 10),
+                Text("Share"),
+              ],
             ),
           ],
         ),

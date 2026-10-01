@@ -5,11 +5,7 @@ class RowWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        Text("Isi Row 1"),
-        Text("Isi Row 2"),
-        Text("Isi Row 3"),
-      ],
+      children: [Text("Isi Row 1"), Text("Isi Row 2"), Text("Isi Row 3")],
     );
   }
 }

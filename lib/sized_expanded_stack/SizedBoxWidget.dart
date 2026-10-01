@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class Sizedboxwidget extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,9 +13,7 @@ class Sizedboxwidget extends StatelessWidget {
           SizedBox(
             width: 150,
             height: 25,
-            child: ElevatedButton(onPressed: () {},
-            child: Text("Tombol"),
-            ),
+            child: ElevatedButton(onPressed: () {}, child: Text("Tombol")),
           ),
         ],
       ),
