@@ -21,21 +21,32 @@ class LatihanEmpat extends StatelessWidget {
               SizedBox(width: 10),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Rehan Ramadhan",
-                  ),
-                  Text(
-                    "XII RPL 1",
-                  ),
-                ],
+                children: [Text("Rehan Ramadhan"), Text("XII RPL 1")],
               ),
               Spacer(),
               Icon(Icons.notifications),
             ],
           ),
         ),
-        
+        Container(
+          width: double.infinity,
+          margin: EdgeInsets.all(15),
+          padding: EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            color: Colors.blue,
+            borderRadius: BorderRadius.circular(15),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text("belajar flutter"),
+              SizedBox(height: 8),
+              Text("bangun aplikasi mulai dari fundamental"),
+              SizedBox(height: 20),
+              ElevatedButton(onPressed: () {}, child: Text("Mulai Belajar")),
+            ],
+          ),
+        ),
       ],
     );
   }
