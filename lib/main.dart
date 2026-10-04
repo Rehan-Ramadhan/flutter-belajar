@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterbelajar/sized_expanded_stack/LatihanEmpat.dart';
+import 'package:flutterbelajar/list_grid/LatihanLima.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         //   backgroundColor: Colors.amber,
         //   centerTitle: true,
         // ),
-        body: LatihanEmpat(),
+        body: LatihanLima(),
       ),
     );
   }
