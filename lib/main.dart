@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterbelajar/list_grid/LatihanLima.dart';
+import 'package:flutterbelajar/list_grid/detailScreenWidget.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +16,10 @@ class MyApp extends StatelessWidget {
         //   backgroundColor: Colors.amber,
         //   centerTitle: true,
         // ),
-        body: LatihanLima(),
+        body: ArticleDetailScreen(data: {
+          'image': 'https://via.placeholder.com/300',
+          'description': 'detailScreenWidget',
+        }),
       ),
     );
   }
