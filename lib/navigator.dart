@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterbelajar/list_grid/list-screenWidget.dart';
+import 'package:flutterbelajar/list_grid_view/list-screenWidget.dart';
 
 class NavigatorWidget extends StatelessWidget {
   const NavigatorWidget({super.key});

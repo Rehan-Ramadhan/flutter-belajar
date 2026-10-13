@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterbelajar/list_grid/detailScreenWidget.dart';
+import 'package:flutterbelajar/list_grid_view/detailScreenWidget.dart';
 
 class ArticleListScreen extends StatelessWidget {
   const ArticleListScreen({super.key});
