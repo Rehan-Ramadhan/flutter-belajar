@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Sizedboxwidget extends StatelessWidget {
+class SizedBoxWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

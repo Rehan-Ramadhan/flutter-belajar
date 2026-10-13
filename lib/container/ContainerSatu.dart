@@ -21,7 +21,7 @@ class ContainerSatu extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
-      child: Text("Acumalaka"),
+      child: Text("Bandung"),
     );
   }
 }

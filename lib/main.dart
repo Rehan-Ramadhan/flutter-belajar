@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterbelajar/list_grid/detailScreenWidget.dart';
+import 'package:flutterbelajar/routes/app_routes.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,17 +10,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        // appBar: AppBar(
-        //   title: Text("Flutter App"),
-        //   backgroundColor: Colors.amber,
-        //   centerTitle: true,
-        // ),
-        body: ArticleDetailScreen(data: {
-          'image': 'https://via.placeholder.com/300',
-          'description': 'detailScreenWidget',
-        }),
-      ),
+      initialRoute: '/',
+      routes: AppRoutes.routes,
+      // home: Scaffold(
+      //   // appBar: AppBar(
+      //   //   title: Text("Flutter App"),
+      //   //   backgroundColor: Colors.amber,
+      //   //   centerTitle: true,
+      //   // ),
+      //   body: ArticleListScreen(),
+      // ),
     );
   }
 }
