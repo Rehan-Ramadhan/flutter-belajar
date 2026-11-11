@@ -38,6 +38,12 @@ class HomePage extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
+                  Navigator.pushNamed(context, AppRoutes.assalaamFood);
+                },
+                child: Text("Assalaam Food"),
+              ),
+              ElevatedButton(
+                onPressed: () {
                   Navigator.pushNamed(context, AppRoutes.containerSatu);
                 },
                 child: Text("Container Satu"),

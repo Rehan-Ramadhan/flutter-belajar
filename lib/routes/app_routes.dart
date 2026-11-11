@@ -40,6 +40,8 @@ import 'package:flutterbelajar/pages/form_page.dart';
 import 'package:flutterbelajar/pages/input_form.dart';
 import 'package:flutterbelajar/pages/latihanenam/input.dart';
 
+import 'package:flutterbelajar/assalaam_food/halaman_menu.dart';
+
 class AppRoutes {
   static const home = '/';
   static const about = '/about';
@@ -80,12 +82,16 @@ class AppRoutes {
   static const inputForm = '/input-form';
   static const latihanEnam = '/latihan-enam';
 
+  static const assalaamFood = '/assalaam-food';
+
   static final Map<String, WidgetBuilder> routes = {
     home: (context) => HomePage(),
     about: (context) => AboutPage(),
     formPage: (context) => FormPage(),
     inputForm: (context) => BelajarForm(),
     latihanEnam: (context) => LatihanEnam(),
+
+    assalaamFood: (context) => HalamanMenu(),
 
     containerSatu: (context) => ContainerSatu(),
     latihanSatuContainer: (context) => container_latihan.LatihanSatu(),
