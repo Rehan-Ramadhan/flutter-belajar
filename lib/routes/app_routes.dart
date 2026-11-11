@@ -36,6 +36,10 @@ import 'package:flutterbelajar/sized_expanded_stack/LayoutSatu.dart';
 import 'package:flutterbelajar/sized_expanded_stack/SizedBoxWidget.dart';
 import 'package:flutterbelajar/sized_expanded_stack/StackWidget.dart';
 
+import 'package:flutterbelajar/pages/form_page.dart';
+import 'package:flutterbelajar/pages/input_form.dart';
+import 'package:flutterbelajar/pages/latihanenam/input.dart';
+
 class AppRoutes {
   static const home = '/';
   static const about = '/about';
@@ -72,9 +76,16 @@ class AppRoutes {
   static const sizedBox = '/sized-box';
   static const stack = '/stack';
 
+  static const formPage = '/form-page';
+  static const inputForm = '/input-form';
+  static const latihanEnam = '/latihan-enam';
+
   static final Map<String, WidgetBuilder> routes = {
     home: (context) => HomePage(),
     about: (context) => AboutPage(),
+    formPage: (context) => FormPage(),
+    inputForm: (context) => BelajarForm(),
+    latihanEnam: (context) => LatihanEnam(),
 
     containerSatu: (context) => ContainerSatu(),
     latihanSatuContainer: (context) => container_latihan.LatihanSatu(),

@@ -20,6 +20,24 @@ class HomePage extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
+                  Navigator.pushNamed(context, AppRoutes.formPage);
+                },
+                child: Text("Form Page"),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, AppRoutes.inputForm);
+                },
+                child: Text("Form Page Pak Kace"),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, AppRoutes.latihanEnam);
+                },
+                child: Text("Latihan Enam"),
+              ),
+              ElevatedButton(
+                onPressed: () {
                   Navigator.pushNamed(context, AppRoutes.containerSatu);
                 },
                 child: Text("Container Satu"),
