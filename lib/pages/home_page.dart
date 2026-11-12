@@ -210,6 +210,12 @@ class HomePage extends StatelessWidget {
                 },
                 child: Text("Stack"),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, AppRoutes.fetchApiPage);
+                },
+                child: Text("Fetch API Page"),
+              ),
             ],
           ),
         ),

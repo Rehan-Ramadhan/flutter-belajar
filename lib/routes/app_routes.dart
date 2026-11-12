@@ -42,6 +42,8 @@ import 'package:flutterbelajar/pages/latihanenam/input.dart';
 
 import 'package:flutterbelajar/assalaam_food/halaman_menu.dart';
 
+import 'package:flutterbelajar/pages/fetch_api_page.dart';
+
 class AppRoutes {
   static const home = '/';
   static const about = '/about';
@@ -83,6 +85,8 @@ class AppRoutes {
   static const latihanEnam = '/latihan-enam';
 
   static const assalaamFood = '/assalaam-food';
+
+  static const fetchApiPage = '/fetch-api-page';
 
   static final Map<String, WidgetBuilder> routes = {
     home: (context) => HomePage(),
@@ -129,5 +133,7 @@ class AppRoutes {
     layoutSatu: (context) => LayoutSatu(),
     sizedBox: (context) => SizedBoxWidget(),
     stack: (context) => StackWidget(),
+
+    fetchApiPage: (context) => AlbumPageState(),
   };
 }
