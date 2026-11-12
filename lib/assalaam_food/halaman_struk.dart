@@ -21,6 +21,8 @@ class HalamanStruk extends StatelessWidget {
   final int uangDibayar;
   final int kembalian;
   final String tanggal;
+  final String nama;
+  final String kelas;
 
   const HalamanStruk({
     super.key,
@@ -30,6 +32,8 @@ class HalamanStruk extends StatelessWidget {
     required this.uangDibayar,
     required this.kembalian,
     required this.tanggal,
+    required this.nama,
+    required this.kelas,
   });
 
   Widget baris(String kiri, String kanan, {bool tebal = false}) {
@@ -53,7 +57,7 @@ class HalamanStruk extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
       child: Text(
-        '- ' * 40,
+        '- ' * 60,
         maxLines: 1,
         softWrap: false,
         overflow: TextOverflow.clip,
@@ -126,6 +130,8 @@ class HalamanStruk extends StatelessWidget {
                       ),
                     ),
                     garisPutus(),
+                    baris('Nama', nama),
+                    baris('Kelas', kelas),
                     baris('Tanggal', tanggal),
                     garisPutus(),
 

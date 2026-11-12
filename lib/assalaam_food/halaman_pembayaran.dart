@@ -29,19 +29,26 @@ class HalamanPembayaran extends StatefulWidget {
 
 class _HalamanPembayaranState extends State<HalamanPembayaran> {
   String metode = 'Cash';
+
+  final TextEditingController namaController = TextEditingController();
+  final TextEditingController kelasController = TextEditingController();
   final TextEditingController uangController = TextEditingController();
 
   @override
   void dispose() {
+    namaController.dispose();
+    kelasController.dispose();
     uangController.dispose();
     super.dispose();
   }
 
   int hitungTotal() {
     int hasil = 0;
+
     for (var item in widget.pesanan) {
       hasil = hasil + (item['harga'] as int) * (item['jumlah'] as int);
     }
+
     return hasil;
   }
 
@@ -54,6 +61,7 @@ class _HalamanPembayaranState extends State<HalamanPembayaran> {
   void kurang(Map<String, dynamic> item) {
     setState(() {
       item['jumlah'] = item['jumlah'] - 1;
+
       if (item['jumlah'] == 0) {
         widget.pesanan.remove(item);
       }
@@ -83,6 +91,8 @@ class _HalamanPembayaranState extends State<HalamanPembayaran> {
           uangDibayar: uang,
           kembalian: kembalian,
           tanggal: tanggal,
+          nama: namaController.text.trim(),
+          kelas: kelasController.text.trim(),
         ),
       ),
     );
@@ -156,8 +166,57 @@ class _HalamanPembayaranState extends State<HalamanPembayaran> {
     );
   }
 
+  Widget bagianIdentitas() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'Data Pemesan',
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: _teksUtama,
+          ),
+        ),
+        const SizedBox(height: 12),
+        TextField(
+          controller: namaController,
+          textCapitalization: TextCapitalization.words,
+          onChanged: (nilai) {
+            setState(() {});
+          },
+          decoration: InputDecoration(
+            labelText: 'Nama Lengkap',
+            hintText: 'Masukkan nama kamu',
+            prefixIcon: const Icon(Icons.person_outline),
+            filled: true,
+            fillColor: Colors.white,
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+          ),
+        ),
+        const SizedBox(height: 12),
+        TextField(
+          controller: kelasController,
+          textCapitalization: TextCapitalization.characters,
+          onChanged: (nilai) {
+            setState(() {});
+          },
+          decoration: InputDecoration(
+            labelText: 'Kelas',
+            hintText: 'Contoh: XII RPL 1',
+            prefixIcon: const Icon(Icons.school_outlined),
+            filled: true,
+            fillColor: Colors.white,
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+          ),
+        ),
+      ],
+    );
+  }
+
   Widget bagianCash(int total, int uang) {
     String? pesanError;
+
     if (uangController.text.isNotEmpty && uang < total) {
       pesanError =
           'Uang kurang ${_rupiah.format(total - uang)} dari total pesanan';
@@ -260,8 +319,14 @@ class _HalamanPembayaranState extends State<HalamanPembayaran> {
     int total = hitungTotal();
     int uang = int.tryParse(uangController.text) ?? 0;
 
+    bool identitasLengkap =
+        namaController.text.trim().isNotEmpty &&
+        kelasController.text.trim().isNotEmpty;
+
     bool bisaBayar =
-        widget.pesanan.isNotEmpty && (metode == 'QRIS' || uang >= total);
+        widget.pesanan.isNotEmpty &&
+        identitasLengkap &&
+        (metode == 'QRIS' || uang >= total);
 
     return Scaffold(
       backgroundColor: _latar,
@@ -279,6 +344,9 @@ class _HalamanPembayaranState extends State<HalamanPembayaran> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            bagianIdentitas(),
+            const SizedBox(height: 24),
+
             const Text(
               'Pesanan Kamu',
               style: TextStyle(
