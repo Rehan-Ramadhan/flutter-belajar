@@ -17,7 +17,7 @@
 // }
 
 import 'package:flutter/material.dart';
-import 'pages/post_page.dart';
+import 'pages/photo_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       title: 'Fetch API Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(colorSchemeSeed: Colors.indigo, useMaterial3: true),
-      home: const PostPage(),
+      home: const PhotoPage(),
     );
   }
 }
