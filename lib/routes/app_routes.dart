@@ -44,6 +44,10 @@ import 'package:flutterbelajar/assalaam_food/halaman_menu.dart';
 
 import 'package:flutterbelajar/pages/fetch_api_page.dart';
 
+import 'package:flutterbelajar/pages/api_laravel/login_page.dart';
+import 'package:flutterbelajar/pages/api_laravel/register_page.dart';
+import 'package:flutterbelajar/pages/api_laravel/home_page.dart';
+
 class AppRoutes {
   static const home = '/';
   static const about = '/about';
@@ -87,6 +91,10 @@ class AppRoutes {
   static const assalaamFood = '/assalaam-food';
 
   static const fetchApiPage = '/fetch-api-page';
+
+  static const login = '/login';
+  static const register = '/register';
+  static const apiHome = '/api-home';
 
   static final Map<String, WidgetBuilder> routes = {
     home: (context) => HomePage(),
@@ -135,5 +143,9 @@ class AppRoutes {
     stack: (context) => StackWidget(),
 
     fetchApiPage: (context) => AlbumPageState(),
+
+    login: (context) => const LoginPage(),
+    register: (context) => const RegisterPage(),
+    apiHome: (context) => const ApiHomePage(),
   };
 }
